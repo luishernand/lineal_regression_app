@@ -33,9 +33,9 @@ st.sidebar.header('Parametros especifícos')
 
 def input_features():
     Word_count = st.sidebar.slider('Word count',int(df['Word count'].min()), int(df['Word count'].max()))
-    No_of_links = st.sidebar.slider('No_of_link', df['# of Links'].min(), df['# of Links'].max())
-    No_images_video= st.sidebar.slider('No. Images Videot', df['# Images video'].min(), df['# Images video'].max())
-    Elapsed_days= st.sidebar.slider('Elapsed days', df['Elapsed days'].min(), df['Elapsed days'].max())
+    No_of_links = st.sidebar.slider('No_of_link', int(df['# of Links'].min()), int(df['# of Links'].max()))
+    No_images_video= st.sidebar.slider('No. Images Videot',int(df['# Images video'].min()), int(df['# Images video'].max()))
+    Elapsed_days= st.sidebar.slider('Elapsed days', int(df['Elapsed days'].min()), int(df['Elapsed days'].max()))
     
     data = {
         'Word_count': Word_count, 
